@@ -1,10 +1,12 @@
 package com.example.testprojectflags
 
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.example.testprojectflags.databinding.ActivityMainBinding
 import com.example.testprojectflags.repo.DataRepository
 import com.example.testprojectflags.retrofit.RetrofitClient.apiService
@@ -40,7 +42,11 @@ class MainActivity : AppCompatActivity() {
             binding?.officialname?.text = "Official Name : " + obj?.name?.official
             binding?.name?.text = "Native Name:"
 
-
+            binding?.flag?.let {
+                Glide.with(this@MainActivity)
+                    .load(obj?.flags?.png)
+                    .into(it)
+            }
         })
 
 

@@ -34,15 +34,27 @@
             android:layout_height="wrap_content"
             android:padding="20dp">
 
+            <ImageView
+                android:id="@+id/flag"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/flag_ab"
+                app:layout_constraintEnd_toEndOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
             <TextView
                 android:id="@+id/commonname"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Commonn Name"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/flag" />
 
             <TextView
                 android:id="@+id/officialname"
@@ -93,6 +105,20 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toplevel" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

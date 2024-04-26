@@ -55,7 +55,8 @@ dependencies {
     implementation(libs.livedata)
     implementation(libs.viewmodel)
     implementation(libs.common)
-
+    implementation(libs.glide)
+    implementation(libs.glidecompiler)
 
 
 }

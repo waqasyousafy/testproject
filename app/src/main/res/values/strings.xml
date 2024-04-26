@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestProjectFlags</string>
+    <string name="common_name">Common Name</string>
+</resources>
